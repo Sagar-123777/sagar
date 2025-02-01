@@ -1,0 +1,16 @@
+name: develop pipeline
+
+   on:
+     push:
+       branches:
+         -develop
+
+jobs:
+   build-and-deploy:
+     runs-on: ubuntu-latest
+    steps:
+      -name: Checkout code
+       uses: actions/checkout@v2
+      -name: Run pipeline tasks
+       run: |
+         #your pipeline tasks go here echo "pipeline triggered"
